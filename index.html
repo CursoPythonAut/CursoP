@@ -1,69 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Menu do curso</title>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+  <title>Menu do Curso</title>
+  <style>
+    body {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
 
-li {
-  float: left;
-}
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #3C9CDD; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000; 
+    }
 
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    li {
+      float: left;
+    }
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
+    li a, .dropbtn {
+      display: inline-block;
+      color: #FFD43B; 
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-li.dropdown {
-  display: inline-block;
-}
+    li a:hover, .dropdown:hover .dropbtn {
+      background-color: #2B7B9D;
+      color: #FFFFFF;
+      border-radius: 4px;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    li.dropdown {
+      display: inline-block;
+    }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+    li:last-child {
+      border-right: none;
+    }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    h1 {
+      color: #FFD43B;
+      text-shadow: 3px 3px #2B7B9D;
+      font-size: 36px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
 
-li:last-child {
-  border-right: none;
-}
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
 
-</style>
+    a {
+      color: #FFD43B;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    center {
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      padding-top: 70px;
+    }
+
+  </style>
 </head>
 <body>
 
 <ul>
-<li><a class="active" href="index.html">Menu</a></li>
+  <li><a href="index.html">Início</a></li>
   <li class="dropdown">
     <a href="Mod1.html">Módulo 1</a>
   </li>
@@ -76,14 +113,23 @@ li:last-child {
   <li style="float:right"><a href="Sobre.html">Sobre</a></li>
 </ul>
 
-<center>
-  <h1>Menu</h1>
-</center>
+<div class="content">
+  <div class="container">
+    <center>
+      <h1>Menu do Curso</h1>
+    </center>
+    <p>Bem-vindo ao site do nosso curso de Python! Aqui você pode navegar pelos módulos disponíveis e escolher o conteúdo que deseja explorar.</p>
+    <a href="Mod1.html"><h2>Módulo 1</h2></a>
+    <p>Neste módulo você irá explorar um pouco sobre o Python, aprendendo sobre sua instalação e configuração, suas vantagens e desvantagens, suas aplicações e seus conceitos básicos.</p>
+    <a href="Mod1.html">Clique aqui para entrar nesse módulo</a>
+    <a href="Mod2.html"><h2>Módulo 2</h2></a>
+    <p>Neste módulo você irá aprender a programação de Python, vendo por exemplo a criação de vetores e de matrizes.</p>
+    <a href="Mod2.html">Clique aqui para entrar nesse módulo</a>
+    <a href="Mod3.html"><h2>Módulo 3</h2></a>
+    <p>Neste módulo você irá aprender sobre a ordenação e busca em vetores.</p>
+    <a href="Mod3.html">Clique aqui para entrar nesse módulo</a>
+  </div>
+</div>
 
-<p>Este é o menu do site do nosso curso de Python</h4>
-  <p>Aqui você pode escolhere qual módulo você quer ver e qual parte do módulo você quer</p><br>
-  <a href="Mod1.html">Módulo 1</a><br>
-  <a href="Mod2.html">Módulo 2</a><br>
-  <a href="Mod3.html">Módulo 3</a>
 </body>
 </html>
