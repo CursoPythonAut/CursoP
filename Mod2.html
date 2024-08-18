@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Módulo 2</title>
+  <style>
+    body {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #3C9CDD; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000; 
+    }
+
+    li {
+      float: left;
+    }
+
+    li a, .dropbtn {
+      display: inline-block;
+      color: #FFD43B; 
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+      background-color: #2B7B9D;
+      color: #FFFFFF;
+      border-radius: 4px;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    h1 {
+      color: #FFD43B;
+      text-shadow: 3px 3px #2B7B9D;
+      font-size: 36px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+      text-align: justify;
+    }
+
+    a {
+      color: #FFD43B;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    center {
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      padding-top: 70px;
+    }
+
+    pre {
+      text-align: left;
+      background-color: #2D2D2D;
+      color: #D4D4D4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 18px;
+    }
+
+    code {
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="index.html">Menu</a></li>
+  <li class="dropdown">
+    <a href="Mod1.html">Módulo 1</a>
+  </li>
+  <li>
+    <a href="Mod2.html" class="dropbtn">Módulo 2</a>
+  </li>
+  <li class="dropdown">
+    <a href="Mod3.html" class="dropbtn">Módulo 3</a>
+  </li>
+  <li style="float:right"><a href="Sobre.html">Sobre</a></li>
+</ul>
+
+<div class="content">
+  <div class="container">
+    <h1>Programas Básicos</h1>
+    <h2>Fatorial</h2>
+    <pre><code>n = int(input("Entre com um número"))
+fat = 1
+for i in range(1, n+1):
+    fat = fat * i
+print(fat)</code></pre>
+    <p>Esse programa faz o fatorial de um número e funciona dessa maneira:</p>
+    <p>Na primeira linha você cria uma variável o int(input) serve para essa variável pegar um valor inteiro escolhido pelo usuário. Depois cria-se outra variável e atribui 1 como valor para ela. Abre-se então um for de um i que varia de 1 até o número escolhido. Dentro do for atribuimos a váriavel de valor um o valor que seja igual a ela mesma vezes o i. Com isso ela vai aumentar de valor conforme o for siga fazendo o fatorial do número que é imprimido na última linha</p>
+    <h2>Primo</h2>
+    <pre><code>n = int(input("Entre com um número"))
+x=0
+for i in range(1,n+1):
+    if(n%i==0):
+        x=x+1
+if x==2:
+    print("Número é primo")
+else:
+    print("Número não é primo")</code></pre>
+    <p>Nesse programa você entra com um valor vê se ele é primo ou não, funcionando da seguinte forma:</p>
+    <p>Criamos uma variável de valor 0 que vai funcionar como um contador. Criamos um for de i que varia de 1 até o número escolhido e depois com o if conferimos se o número escolhido pode ser divisível ou não por i com o n%i==0. O % faz a divisão e da como respostao o resto da divisão então só será 0 quando o número for divisível pelo outro. Se ele for divisível o x vai aumentar um valor. Depois com outro if conferimos se o valor de x é igual a 2, se for o número é primo, pois um número primo é aquele que é divisível por 1 e por ele mesmo. Se não for 2 o número não é primo.</p>
+    <h2>Euler</h2>
+    <pre><code>n = int(input("Entre com um número"))
+E=1
+for i in range(1, n+1):
+    fat=1
+    for j in range(1,i+1):
+        fat= fat*j
+    E= E+(1/fat)
+print(f"O número de euler de {n} é {E}")</code></pre>
+    <p>Nesse programa você entra com um valor e ele faz o seu número de Euler funcionando da seguinte forma:</p>
+    <p>Primeiramente criamos uma variável E com valor de 1. Depois criamos um for de i que varia de 1 até n, o número escolhido. Dentro desse for fazemos o fatorial usando o i como referencia para o for do fatorial. Depois disso falamos que o E é igual a ele mesmo mais 1 dividido pelo fatorial de i. Isso faz o número de Euler, já que o número de Euler de n é igual a 1 + 1/n + 1/n-1 ... 1/n-k. Por fim imprimimos o número de Euler</p>
+    <h2>Fibonacci</h2>
+    <pre><code>n = int(input("Entre com um número"))
+a=0
+b=1
+print(f"sequencia de Fibonacci:{a} {b}", end = ' ')
+x = n-2
+for i in range(1,x+1):
+    c=a+b
+    print(c, end =' ')
+    a=b
+    b=c</code></pre>
+    <p>Nesse programa você entra com um valor e ele faz a sequencia de Fibonacci dele, funcionando da seguinte forma:</p>
+    <p>Primeiramente criamos a variável a que vale 0 e b que vale 1 e as imprimimos, o end=' ' serve para não pular linha. Depois fazemos um for de um i que varia de 1 até o número desejado. Dentro dele criamos uma variável c que tem o valor de a + b e a imprimimos, por fim falamos que atribuimos a variável a o valor de b e a b o valor de c e o loop do for vai imprimir a sequencia de Fibonacci.</p>
+    <h1>Vetores</h1>
+    <pre><code>n = int(input("Entre com a dimensão do vetor:  "))
+vetor=[]
+for i in range(0, n):
+    vetor.append(int(input(f"Entre com a posição {i} do vetor:  ")))
+ for i in range(0, n):
+    print(f"[{vetor[i]}]",end=' ')</code></pre>
+    <p>Nesse programa você entra com um valor ele faz um vetor com a dimensão do número definido. Ele funciona da seguinte forma:</p>
+    <p>Primeiramente declaramos um vetor que pode ter dimensão infinita, porém iremos apenas utilizar a dimensão escolhida pelo usuário. Depois fazemos um for que vai de 0 até um número a menos do número escolhido. Dentro do for o vetor.append coloca valores escolhidos pelo usuário desde a posição 0 do vetor. Por fim fazemos um último for igual ao anterior imprimindo o vetor.</p>
+    <h1>Matrizes</h1>
+    <pre><code>import numpy as np
+linhas = int(input("Digite o número de linhas: "))
+colunas = int(input("Digite o número de colunas: "))
+matriz = np.zeros((linhas, colunas))
+for i in range(linhas):
+    for j in range(colunas):
+        valor = int(input(f"Digite o valor para a posição [{i}][{j}]: "))
+        matriz[i, j] = valor
+for i in range(linhas):
+    print()
+    for j in range(colunas):
+        print(f"[{matriz[i,j]}]",end=' ')</code></pre>
+    <p>Esse programa faz uma matriz com as dimensões definidas pelo usuário. Ele funciona da seguinte forma:</p>
+    <p>Primeiro definimos o número de linhas e de colunas da matriz. Depois atribuimos a ela essas dimensões criamos então dois for um pra variar as linhas e outro para as colunas. Dentro dele pedimos para o usuário escolher o valor a ser inserido na posição da matriz. Depois repitimos os for e imprimimos a matriz</p>
+    <h1>Arquivos</h1>
+    <h2>Criação e escrita de um arquivo</h2>
+    <pre><code>nome = input("Escreva o nome do arquivo:")
+arquivo = open(nome+".txt", "w")
+valor = input("Escreva o que você quiser:")
+arquivo.write(valor)
+arquivo.close()</code></pre>
+    <p>Esse programa cria um arquivo de nome escolhido pelo usuário e escreve nele, se ele já existe ele escreve em cima do existente. Ele funciona da seguinte forma:</p>
+    <p>Primeiramente colocamos o nome do arquivo. Depois com o arquivo = open criamos ou abrimos o arquivo com o nome dele mais a extensão .txt. É importante lembra que o "w" dentro do open é pra ele ser aberto para poder ser escrito nele. O criamos uma variável que vai receber qualquer coisa que o usuário escrever e depois com o arquivo.write escrevemos essa informação nele. Por fim fechamos o arquivo.</p>
+    <h2>Leitura de um arquivo</h2>
+    <pre><code>nome = input("Escreva o nome do arquivo:")
+arquivo = open(nome+".txt", "r")
+conteudo = arquivo.read()
+print(conteudo)
+arquivo.close()</code></pre>
+    <p>Esse programa le uma informação escrita em um arquivo de nome escolhido pelo usuário. Ele funciona da seguinte forma:</p>
+    <p>Escolhemos o nome do arquivo e abrimos ele com "r", forma de ser lida. Criamos uma variável que pega o valor do que está escrito no arquivo e depois imprimimos ela. Por fim fechamos o arquivo.</p>
+    <h2>Exclusão de um arquivo</h2>
+    <pre><code>import os
+nome = input("Digite o nome do arquivo que deseja excluir: ")
+if os.path.exists(nome+".txt"):
+    os.remove(nome+".txt")
+    print(f"O arquivo '{nome+".txt"}' foi excluído com sucesso.")
+else:
+    print(f"O arquivo '{nome+".txt"}' não foi encontrado.")</code></pre>
+    <p>Esse programa exclui um arquivo de nome escolhido pelo usuário. Ele funciona da seguinte forma:</p>
+    <p>Primeiramente escolhemos o nome do arquivo. Depois conferimos se ele existe. Se sim o excluimos e avisamos que foi excluído. Se não avisamos que ele não foi encontrado.</p>        
+</div>
+</div>
+
+</body>
+</html>
