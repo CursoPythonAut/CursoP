@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu do Curso</title>
+  <style>
+    body {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #3C9CDD; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000; 
+    }
+
+    li {
+      float: left;
+    }
+
+    li a, .dropbtn {
+      display: inline-block;
+      color: #FFD43B; 
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+      background-color: #2B7B9D;
+      color: #FFFFFF;
+      border-radius: 4px;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    h1 {
+      color: #FFD43B;
+      text-shadow: 3px 3px #2B7B9D;
+      font-size: 36px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    a {
+      color: #FFD43B;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    center {
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      padding-top: 70px;
+    }
+
+  </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="indexgo.html">Início</a></li>
+  <li class="dropdown">
+    <a href="Mod1go.html">Módulo 1</a>
+  </li>
+  <li>
+    <a href="Mod2go.html" class="dropbtn">Módulo 2</a>
+  </li>
+  <li class="dropdown">
+    <a href="Mod3go.html" class="dropbtn">Módulo 3</a>
+  </li>
+  <li style="float:right"><a href="Sobrego.html">Sobre</a></li>
+</ul>
+
+<div class="content">
+  <div class="container">
+    <center>
+      <h1>Menu do Curso</h1>
+    </center>
+    <p>Bem-vindo ao site do nosso curso de GO! Aqui você pode navegar pelos módulos disponíveis e escolher o conteúdo que deseja explorar.</p>
+    <a href="Mod1go.html"><h2>Módulo 1</h2></a>
+    <p>Neste módulo você irá explorar um pouco sobre o GO, aprendendo sobre sua instalação e configuração, suas vantagens e desvantagens, suas aplicações e seus conceitos básicos.</p>
+    <a href="Mod1go.html">Clique aqui para entrar nesse módulo</a>
+    <a href="Mod2go.html"><h2>Módulo 2</h2></a>
+    <p>Neste módulo você irá aprender a programação de GO, vendo por exemplo a criação de vetores e de matrizes.</p>
+    <a href="Mod2go.html">Clique aqui para entrar nesse módulo</a>
+    <a href="Mod3go.html"><h2>Módulo 3</h2></a>
+    <p>Neste módulo você irá aprender sobre a ordenação e busca em vetores e matrizes.</p>
+    <a href="Mod3go.html">Clique aqui para entrar nesse módulo</a>
+  </div>
+</div>
+
+</body>
+</html>
